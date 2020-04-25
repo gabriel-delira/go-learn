@@ -158,7 +158,7 @@ func Test7(){
 	wg := sync.WaitGroup{}
 	wg.Add(numberOfRoutines)
 
-	func (){
+	go func (){
 		for i := 0; i < numberOfRoutines; i++ {
 			go func (iterator int) {
 				for j := 0; j < 10; j++ {
