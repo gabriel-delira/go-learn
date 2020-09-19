@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Read table:</h1>
+
+    <div style="display:flex;">
+        <div>
+        | {{.Header.Date}} | {{.Header.Open}} | {{.Header.High}} | {{.Header.Low}} | {{.Header.Close}} | {{.Header.Volume}} | {{.Header.AdjClose}} |
+        </div>
+    </div>
+
+    <div style="display:flex;">
+    {{range .Rows}}
+        <div>
+        | {{.Date}} | {{.Open}} | {{.High}} | {{.Low}} | {{.Close}} | {{.Volume}} | {{.AdjClose}} |
+        </div>
+    {{end}}
+    </div>
+
+</body>
+</html>

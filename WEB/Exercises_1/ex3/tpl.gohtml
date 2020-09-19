@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Menu</h1>
+
+{{.Breakfast.Name}}
+<h3>Foods:</h3>
+{{range .Breakfast.Foods}}
+    {{.Name}}
+    {{.Description}}
+{{end}}
+<h3>Drinks:</h3>
+{{range .Breakfast.Drinks}}
+    {{.Name}}
+    {{.Description}}
+    {{if .Hot}}
+        <div>small fire</div>
+    {{else}}
+        <div>small ice</div>
+    {{end}}
+{{end}}
+
+{{.Lunch.Name}}
+<h3>Foods:</h3>
+{{range .Lunch.Foods}}
+    {{.Name}}
+    {{.Description}}
+{{end}}
+<h3>Drinks:</h3>
+{{range .Lunch.Drinks}}
+    {{.Name}}
+    {{.Description}}
+    {{if .Hot}}
+        <div>small fire</div>
+    {{else}}
+        <div>small ice</div>
+    {{end}}
+{{end}}
+
+{{.Dinner.Name}}
+<h3>Foods:</h3>
+{{range .Dinner.Foods}}
+    {{.Name}}
+    {{.Description}}
+{{end}}
+<h3>Drinks:</h3>
+{{range .Dinner.Drinks}}
+    {{.Name}}
+    {{.Description}}
+    {{if .Hot}}
+        <div>small fire</div>
+    {{else}}
+        <div>small ice</div>
+    {{end}}
+{{end}}
+
+</body>
+</html>
